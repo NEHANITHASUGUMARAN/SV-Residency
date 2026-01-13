@@ -29,9 +29,12 @@
     }
 
     body {
-      @apply bg-[hsl(var(--forest-dark))] text-[hsl(var(--cream))] font-sans antialiased;
-      font-family: 'Lato', sans-serif;
-    }
+  background-color: hsl(var(--forest-dark));
+  color: hsl(var(--cream));
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Playfair Display', serif;
