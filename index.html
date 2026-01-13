@@ -130,13 +130,31 @@
 
 
 /* GOLD SHIMMER */
+
+
 .gold-text {
   background: linear-gradient(120deg, #f6e27a, #d4af37, #fff1b8);
   background-size: 200%;
-  -webkit-background-clip: text;
+
+  /* Standard property first */
+  background-clip: text;
+  color: transparent;
+
+  /* Webkit support without linter issues */
   -webkit-text-fill-color: transparent;
+
   animation: goldFlow 4s linear infinite;
 }
+
+@keyframes goldFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
 
 .hero-bg {
   animation: slowZoom 18s ease-in-out infinite alternate;
