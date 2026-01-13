@@ -1057,8 +1057,8 @@
   <!-- Contact Section -->
 
 
-  <!-- Contact Section -->
-<section id="contact" class="py-24 gradient-forest relative overflow-hidden">
+ <!-- Contact Section -->
+<section id="contact" class="py-16 md:py-24 gradient-forest relative overflow-hidden">
 
   <!-- Decorative Glow -->
   <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[hsl(var(--gold))] opacity-10 blur-[120px] rounded-full"></div>
@@ -1067,9 +1067,9 @@
   <div class="container mx-auto px-4 relative z-10">
 
     <!-- Header -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-12 md:mb-16">
       <span class="section-header">GET IN TOUCH</span>
-      <h2 class="section-title">
+      <h2 class="section-title text-3xl sm:text-4xl md:text-5xl">
         Contact <span class="text-gradient-gold">Us</span>
       </h2>
       <p class="text-[hsl(var(--cream))] text-opacity-60 max-w-2xl mx-auto">
@@ -1078,17 +1078,18 @@
       <div class="section-divider"></div>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12">
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 
       <!-- Contact Form -->
-      <div class="glass-card p-10 gold-border shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
-        <h3 class="font-serif text-2xl font-bold text-[hsl(var(--cream))] mb-8">
+      <div class="glass-card p-6 md:p-10 gold-border shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+        <h3 class="font-serif text-xl md:text-2xl font-bold text-[hsl(var(--cream))] mb-6 md:mb-8">
           Send us a Message
         </h3>
 
         <form id="contactForm" class="space-y-5">
 
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input type="text" name="name" placeholder="Your Name" required
               class="bg-black/40 border border-[hsl(var(--gold))] border-opacity-30 
               text-[hsl(var(--cream))] px-4 py-3 rounded-xl 
@@ -1104,7 +1105,7 @@
               transition placeholder:text-white/40">
           </div>
 
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <input type="tel" name="phone" placeholder="Phone" required
               class="bg-black/40 border border-[hsl(var(--gold))] border-opacity-30 
               text-[hsl(var(--cream))] px-4 py-3 rounded-xl 
@@ -1139,16 +1140,14 @@
       </div>
 
       <!-- Info + Map -->
-      <div class="space-y-8">
+      <div class="space-y-6 md:space-y-8">
 
         <!-- Contact Info -->
-        <div class="grid sm:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
           <div class="glass-card p-5 gold-border gold-border-hover hover-lift">
             <a href="tel:+919600174666" class="flex items-start gap-4">
-              <div>
-                <i class="fa-solid fa-phone text-[hsl(var(--gold))]"></i>
-              </div>
+              <i class="fa-solid fa-phone text-[hsl(var(--gold))]"></i>
               <div>
                 <p class="text-[hsl(var(--cream))] text-opacity-60 text-xs uppercase tracking-wide">Phone</p>
                 <p class="text-[hsl(var(--cream))] font-medium text-sm">+91 9600174666</p>
@@ -1158,9 +1157,7 @@
 
           <div class="glass-card p-5 gold-border gold-border-hover hover-lift">
             <a href="mailto:svresidencytpr@gmail.com" class="flex items-start gap-4">
-              <div>
-                <i class="fa-solid fa-envelope text-[hsl(var(--gold))]"></i>
-              </div>
+              <i class="fa-solid fa-envelope text-[hsl(var(--gold))]"></i>
               <div>
                 <p class="text-[hsl(var(--cream))] text-opacity-60 text-xs uppercase tracking-wide">Email</p>
                 <p class="text-[hsl(var(--cream))] font-medium text-sm">svresidencytpr@gmail.com</p>
@@ -1171,23 +1168,29 @@
         </div>
 
         <!-- Map -->
-        
-        <div class="relative glass-card rounded-2xl overflow-hidden gold-border h-80 shadow-[0_25px_70px_rgba(0,0,0,0.45)]">
-  
+        <div class="relative glass-card rounded-2xl overflow-hidden gold-border h-64 md:h-80 shadow-[0_25px_70px_rgba(0,0,0,0.45)]">
+
           <div class="absolute top-4 left-4 bg-black/70 px-4 py-2 rounded-full 
                       text-xs tracking-widest text-[hsl(var(--gold))] z-10">
             FIND US HERE
           </div>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.8121792980887!2d80.18774397483696!3d12.725672687567586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52510074f5d77f%3A0x52630630bc1767e1!2sS.V%20RESIDENCY!5e0!3m2!1sen!2sin!4v1768309095651!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.8121792980887!2d80.18774397483696!3d12.725672687567586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52510074f5d77f%3A0x52630630bc1767e1!2sS.V%20RESIDENCY!5e0!3m2!1sen!2sin!4v1768309095651!5m2!1sen!2sin"
+            class="w-full h-full"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
 
         </div>
-
 
       </div>
     </div>
   </div>
 </section>
+
 
   <!-- Footer -->
   <footer class="bg-[hsl(var(--forest-dark))] border-t border-[hsl(var(--forest-light))] border-opacity-30 pt-16 pb-8">
