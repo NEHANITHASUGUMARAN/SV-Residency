@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="S V RESIDENCY – Luxury stay near Thiruporur Murugan Temple. Peaceful, elegant, and spiritually serene accommodation.">
+  <title>S V RESIDENCY | Thiruporur</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <style>
+    :root {
+      --gold: 45 70% 55%; /* #e6c229 */
+      --forest-light: 140 39% 30%; /* #2E6B3F */
+      --forest: 140 42% 21%;       /* #1F4D2B */
+      --forest-dark: 140 45% 15%;  /* #14361F */
+      --cream: 45 30% 95%;         /* #f0f9f1 */
+      --cream-muted: 45 20% 85%;
+    }
+
+    body {
+      @apply bg-[hsl(var(--forest-dark))] text-[hsl(var(--cream))] font-sans antialiased;
+      font-family: 'Lato', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* HERO BASE */
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Playfair Display', serif;
+    }
+
+
+    /* BACKGROUND IMAGE */
+   
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("images/temple.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      /* BOOST IMAGE VISIBILITY */
+      filter: brightness(1.15) contrast(1.1) saturate(1.2);
+      transform: scale(1.05);
+    }
+
+/* CINEMATIC OVERLAY */
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.7)
+    ),
+    radial-gradient(
+      circle at top,
+      rgba(212, 175, 55, 0.25),
+      transparent 55%
+    );
+}
+
+/* CONTENT CARD */
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 880px;
+  padding: 3.5rem;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.35); /* lighter */
+  backdrop-filter: blur(12px);
+
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    inset 0 0 60px rgba(212, 175, 55, 0.05);
+}
+
+
+
+/* WELCOME TEXT */
+.hero-welcome {
+  letter-spacing: 0.35em;
+  font-size: 0.9rem;
+  color: #d4af37;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+
+/* TITLE */
+.hero-title {
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+
+/* GOLD SHIMMER */
+.gold-text {
+  background: linear-gradient(120deg, #f6e27a, #d4af37, #fff1b8);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldFlow 4s linear infinite;
+}
+
+.hero-bg {
+  animation: slowZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+
+@keyframes goldFlow {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* TAGLINE */
+.hero-tagline {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  margin-bottom: 0.5rem;
+}
+
+/* LOCATION */
+.hero-location {
+  color: #d4af37;
+  letter-spacing: 0.3em;
+  margin-bottom: 1.5rem;
+}
+
+/* DESCRIPTION */
+.hero-desc {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d4af37, #f6e27a);
+  color: #1f2a1f;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(212,175,55,0.5);
+}
+
+.btn-outline {
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #d4af37;
+  color: #1f2a1f;
+  box-shadow: 0 15px 40px rgba(212,175,55,0.4);
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  margin-top: 3rem;
+}
+
+.scroll-indicator span {
+  display: inline-block;
+  width: 22px;
+  height: 36px;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll-indicator span::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #d4af37;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, 14px); }
+}
+
+
+    .glass-card {
+      background: rgba(20, 54, 31, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(230, 194, 41, 0.3);
+      border-radius: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      background: rgba(20, 54, 31, 0.85);
+      box-shadow: 0 8px 32px rgba(230, 194, 41, 0.2);
+    }
+
+    .gradient-forest {
+      background: linear-gradient(180deg, hsl(var(--forest-light)) 0%, hsl(var(--forest)) 50%, hsl(var(--forest-dark)) 100%);
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(45, 60%, 70%) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hover-lift {
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(230, 194, 41, 0.3);
+    }
+
+    .gold-border {
+      border: 1px solid rgba(230, 194, 41, 0.3);
+    }
+
+    .gold-border-hover:hover {
+      border-color: rgba(230, 194, 41, 0.6);
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 50;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    /* Custom section headers */
+    .section-header {
+      font-size: 0.875rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: hsl(var(--gold));
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: hsl(var(--cream));
+      font-weight: 700;
+    }
+
+    .section-title span {
+      color: hsl(var(--gold));
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, transparent, hsl(var(--gold)), transparent);
+      margin: 1rem auto;
+    }
+
+    /* Room card price badge */
+    .price-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(230, 194, 41, 0.9);
+      color: hsl(var(--forest-dark));
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      font-size: 0.875rem;
+    }
+
+    /* Checkered background pattern */
+    .checkered-bg {
+      background-image: 
+        linear-gradient(45deg, hsl(var(--forest-dark)) 25%, transparent 25%),
+        linear-gradient(-45deg, hsl(var(--forest-dark)) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, hsl(var(--forest-dark)) 75%),
+        linear-gradient(-45deg, transparent 75%, hsl(var(--forest-dark)) 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    }
+
+    /* Navbar gradient */
+    .navbar-gradient {
+      background: linear-gradient(180deg, hsl(var(--forest-dark)) 0%, hsl(var(--forest)) 100%);
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-5 navbar-gradient transition-all duration-500">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div>
+          <div class="font-serif text-xl md:text-2xl font-bold text-gradient-gold">S V RESIDENCY</div>
+          <div class="text-xs text-[hsl(var(--cream))] text-opacity-70 tracking-widest">THIRUPORUR</div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-6">
+          <a href="#home" class="text-[hsl(var(--cream))] text-opacity-80 hover:text-[hsl(var(--gold))] transition">Home</a>
+          <a href="#about" class="text-[hsl(var(--cream))] text-opacity-80 hover:text-[hsl(var(--gold))] transition">About</a>
+          <a href="#rooms" class="text-[hsl(var(--cream))] text-opacity-80 hover:text-[hsl(var(--gold))] transition">Rooms</a>
+          <a href="#services" class="text-[hsl(var(--cream))] text-opacity-80 hover:text-[hsl(var(--gold))] transition">Services</a>
+          <a href="#nearby" class="text-[hsl(var(--cream))] text-opacity-80 hover:text-[hsl(var(--gold))] transition">Nearby</a>
+          <a href="#contact" class="text-[hsl(var(--cream))] text-opacity-80 hover:text-[hsl(var(--gold))] transition">Contact</a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="tel:+919600174666" class="flex items-center gap-1.5 bg-[hsl(var(--forest-light))] text-[hsl(var(--cream))] px-3 py-1.5 rounded-lg text-sm hover:bg-[hsl(var(--gold))] hover:text-[hsl(var(--forest-dark))] transition">
+            <i class="fa-solid fa-phone"></i>
+            <span class="hidden xl:inline">Call Now</span>
+          </a>
+          <a href="https://wa.me/919600174666" target="_blank" class="flex items-center gap-1.5 bg-[#25D366] text-white px-3 py-1.5 rounded-lg text-sm hover:bg-[#128C7E] transition">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="hidden xl:inline">WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="lg:hidden text-[hsl(var(--cream))]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu hidden mt-4 glass-card p-4 rounded-xl">
+        <div class="flex flex-col gap-4">
+          <a href="#home" class="text-[hsl(var(--cream))] text-opacity-80 py-2 border-b border-[hsl(var(--forest-light))] border-opacity-20">Home</a>
+          <a href="#about" class="text-[hsl(var(--cream))] text-opacity-80 py-2 border-b border-[hsl(var(--forest-light))] border-opacity-20">About</a>
+          <a href="#rooms" class="text-[hsl(var(--cream))] text-opacity-80 py-2 border-b border-[hsl(var(--forest-light))] border-opacity-20">Rooms</a>
+          <a href="#services" class="text-[hsl(var(--cream))] text-opacity-80 py-2 border-b border-[hsl(var(--forest-light))] border-opacity-20">Services</a>
+          <a href="#nearby" class="text-[hsl(var(--cream))] text-opacity-80 py-2 border-b border-[hsl(var(--forest-light))] border-opacity-20">Nearby</a>
+          <a href="#contact" class="text-[hsl(var(--cream))] text-opacity-80 py-2 border-b border-[hsl(var(--forest-light))] border-opacity-20">Contact</a>
+          <div class="flex gap-3 pt-4">
+            <a href="tel:+919600174666" class="flex-1 text-center bg-[hsl(var(--forest-light))] text-[hsl(var(--cream))] py-2 rounded-lg text-sm">Call</a>
+            <a href="https://wa.me/919600174666" target="_blank" class="flex-1 text-center bg-[#25D366] text-white py-2 rounded-lg text-sm">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+
+
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class=""></div>
+
+    <div class="hero-content">
+      <span class="hero-welcome">WELCOME TO</span>
+
+      <h1 class="hero-title">
+        S V <span class="gold-text">RESIDENCY</span>
+      </h1>
+
+      <p class="hero-tagline">Your Gateway to Peace & Spirituality</p>
+      <p class="hero-location">THIRUPORUR</p>
+
+      <p class="hero-desc">
+        Experience the perfect blend of luxury and tranquility, nestled near the
+        sacred Thiruporur Murugan Temple. Your spiritual journey begins with comfort.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#rooms" class="btn-primary">Book Your Stay</a>
+        <a href="#about" class="btn-outline">Discover More</a>
+      </div>
+
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 gradient-forest relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="section-header">ABOUT US</span>
+          <h2 class="section-title">
+            A Haven of <span class="text-gradient-gold">Tranquility</span>
+          </h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <p class="text-[hsl(var(--cream))] text-opacity-80 text-lg leading-relaxed">
+              Nestled in the heart of Thiruporur, S V Residency offers a unique blend of modern comfort and spiritual serenity.
+              Our residency is strategically located near the renowned Thiruporur Murugan Temple, making it the perfect retreat for pilgrims and travelers alike.
+            </p>
+            <p class="text-[hsl(var(--cream))] text-opacity-70 leading-relaxed">
+              Whether you're seeking a peaceful getaway, a spiritual journey, or a comfortable stay for business, our thoughtfully designed rooms and warm hospitality ensure an unforgettable experience.
+            </p>
+            <div class="pt-4">
+              <blockquote class="border-l-4 border-[hsl(var(--gold))] pl-6 italic text-[hsl(var(--cream))] text-xl">
+                "Where comfort meets devotion, and luxury embraces peace."
+              </blockquote>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <!-- Feature 1 -->
+            <div class="glass-card p-6 hover-lift gold-border gold-border-hover">
+              <div class="w-12 h-12 rounded-xl bg-[hsl(var(--gold))] bg-opacity-10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-2">Premium Quality</h3>
+              <p class="text-[hsl(var(--cream))] text-opacity-60 text-sm">Luxury amenities crafted for your comfort</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="glass-card p-6 hover-lift gold-border gold-border-hover">
+              <div class="w-12 h-12 rounded-xl bg-[hsl(var(--gold))] bg-opacity-10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0-7-9-13-9-13s-9 6-9 13a9 9 0 0 0 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-2">Prime Location</h3>
+              <p class="text-[hsl(var(--cream))] text-opacity-60 text-sm">Steps away from the sacred Murugan Temple</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="glass-card p-6 hover-lift gold-border gold-border-hover">
+              <div class="w-12 h-12 rounded-xl bg-[hsl(var(--gold))] bg-opacity-10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-2">Warm Hospitality</h3>
+              <p class="text-[hsl(var(--cream))] text-opacity-60 text-sm">Experience genuine South Indian warmth</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="glass-card p-6 hover-lift gold-border gold-border-hover">
+              <div class="w-12 h-12 rounded-xl bg-[hsl(var(--gold))] bg-opacity-10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-2">24/7 Service</h3>
+              <p class="text-[hsl(var(--cream))] text-opacity-60 text-sm">Round-the-clock assistance for all needs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms Section -->
+
+    <section id="rooms" class="py-24 bg-[hsl(var(--forest-dark))] relative">
+    <div class="container mx-auto px-4 relative z-10">
+
+      <!-- Heading -->
+      <div class="text-center mb-16">
+        <span class="section-header">ACCOMMODATIONS</span>
+        <h2 class="section-title">
+          Our <span class="text-gradient-gold">Rooms</span>
+        </h2>
+        <p class="text-[hsl(var(--cream))] text-opacity-60 max-w-2xl mx-auto">
+          Thoughtfully designed rooms offering comfort, elegance, and a relaxing stay in Thiruporur.
+        </p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Flex Rooms -->
+      <div class="flex flex-col lg:flex-row gap-10">
+
+        <!-- Room Card -->
+        <div class="glass-card flex-1 rounded-3xl overflow-hidden hover-lift gold-border gold-border-hover group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="images/image2.jpeg" alt="Luxury Room"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+          </div>
+
+          <div class="p-8">
+            <h3 class="font-serif text-2xl font-bold text-[hsl(var(--cream))] mb-3">
+              Comfort
+            </h3>
+
+            <p class="text-[hsl(var(--cream))] text-opacity-60 text-sm mb-6">
+              A beautifully furnished room designed for relaxation, comfort, and a peaceful stay experience.
+            </p>
+
+            <!-- Amenities -->
+            <div class="flex gap-3 mb-8">
+              <span class="flex items-center gap-2 text-xs text-[hsl(var(--cream))] bg-white bg-opacity-10 rounded-full px-4 py-2">
+                <i class="fa-solid fa-wifi text-[hsl(var(--gold))]"></i> Free Wi-Fi
+              </span>
+              <span class="flex items-center gap-2 text-xs text-[hsl(var(--cream))] bg-white bg-opacity-10 rounded-full px-4 py-2">
+                <i class="fa-solid fa-snowflake text-[hsl(var(--gold))]"></i> Air Conditioning
+              </span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex gap-4">
+              <a href="#contact"
+                class="flex-1 text-center border border-[hsl(var(--gold))] text-[hsl(var(--gold))] py-3 rounded-xl text-sm hover:bg-[hsl(var(--gold))] hover:text-[hsl(var(--forest-dark))] transition">
+                View Details
+              </a>
+              <a href="https://wa.me/919600174666"
+                target="_blank"
+                class="flex-1 text-center bg-[hsl(var(--gold))] text-[hsl(var(--forest-dark))] py-3 rounded-xl text-sm font-semibold hover:bg-[hsl(45,80%,40%)] transition">
+                Inquire Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate Card 2 -->
+        <div class="glass-card flex-1 rounded-3xl overflow-hidden hover-lift gold-border gold-border-hover group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="images/image1.jpeg" alt="Luxury Room"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+          </div>
+
+          <div class="p-8">
+            <h3 class="font-serif text-2xl font-bold text-[hsl(var(--cream))] mb-3">
+              Luxury
+            </h3>
+            <p class="text-[hsl(var(--cream))] text-opacity-60 text-sm mb-6">
+              Elegantly crafted interiors with modern amenities to ensure a memorable stay.
+            </p>
+
+            <div class="flex gap-3 mb-8">
+              <span class="flex items-center gap-2 text-xs text-[hsl(var(--cream))] bg-white bg-opacity-10 rounded-full px-4 py-2">
+                <i class="fa-solid fa-wifi text-[hsl(var(--gold))]"></i> Free Wi-Fi
+              </span>
+              <span class="flex items-center gap-2 text-xs text-[hsl(var(--cream))] bg-white bg-opacity-10 rounded-full px-4 py-2">
+                <i class="fa-solid fa-snowflake text-[hsl(var(--gold))]"></i> Air Conditioning
+              </span>
+            </div>
+
+            <div class="flex gap-4">
+              <a href="#contact" class="flex-1 text-center border border-[hsl(var(--gold))] text-[hsl(var(--gold))] py-3 rounded-xl text-sm hover:bg-[hsl(var(--gold))] hover:text-[hsl(var(--forest-dark))] transition">
+                View Details
+              </a>
+              <a href="https://wa.me/919600174666" target="_blank"
+                class="flex-1 text-center bg-[hsl(var(--gold))] text-[hsl(var(--forest-dark))] py-3 rounded-xl text-sm font-semibold hover:bg-[hsl(45,80%,40%)] transition">
+                Inquire Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate Card 3 -->
+        <div class="glass-card flex-1 rounded-3xl overflow-hidden hover-lift gold-border gold-border-hover group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="images/image3.jpeg" alt="Luxury Room"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+          </div>
+
+          <div class="p-8">
+            <h3 class="font-serif text-2xl font-bold text-[hsl(var(--cream))] mb-3">
+              Serene Stay 
+            </h3>
+            <p class="text-[hsl(var(--cream))] text-opacity-60 text-sm mb-6">
+              A serene environment paired with refined comfort and elegant interiors.
+            </p>
+
+            <div class="flex gap-3 mb-8">
+              <span class="flex items-center gap-2 text-xs text-[hsl(var(--cream))] bg-white bg-opacity-10 rounded-full px-4 py-2">
+                <i class="fa-solid fa-wifi text-[hsl(var(--gold))]"></i> Free Wi-Fi
+              </span>
+              <span class="flex items-center gap-2 text-xs text-[hsl(var(--cream))] bg-white bg-opacity-10 rounded-full px-4 py-2">
+                <i class="fa-solid fa-snowflake text-[hsl(var(--gold))]"></i> Air Conditioning
+              </span>
+            </div>
+
+            <div class="flex gap-4">
+              <a href="#contact" class="flex-1 text-center border border-[hsl(var(--gold))] text-[hsl(var(--gold))] py-3 rounded-xl text-sm hover:bg-[hsl(var(--gold))] hover:text-[hsl(var(--forest-dark))] transition">
+                View Details
+              </a>
+              <a href="https://wa.me/919600174666" target="_blank"
+                class="flex-1 text-center bg-[hsl(var(--gold))] text-[hsl(var(--forest-dark))] py-3 rounded-xl text-sm font-semibold hover:bg-[hsl(45,80%,40%)] transition">
+                Inquire Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 gradient-forest relative overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10">
+
+      <!-- Heading -->
+      <div class="text-center mb-16">
+        <span class="section-header">WHAT WE OFFER</span>
+        <h2 class="section-title">
+          Our <span class="text-gradient-gold">Services</span>
+        </h2>
+        <p class="text-[hsl(var(--cream))] text-opacity-60 max-w-2xl mx-auto">
+          Essential comforts thoughtfully designed to elevate your stay experience.
+        </p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Free WiFi -->
+        <div class="glass-card p-8 text-center hover-lift gold-border gold-border-hover">
+          <i class="fa-solid fa-wifi text-4xl text-[hsl(var(--gold))] mb-6"></i>
+          <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-3">
+            Free Wi-Fi
+          </h3>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Seamless internet access for work, streaming, and staying connected.
+          </p>
+        </div>
+
+        <!-- Air Conditioning -->
+        <div class="glass-card p-8 text-center hover-lift gold-border gold-border-hover">
+          <i class="fa-solid fa-snowflake text-4xl text-[hsl(var(--gold))] mb-6"></i>
+          <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-3">
+            Air-Conditioned Rooms
+          </h3>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Enjoy a cool and comfortable environment throughout your stay.
+          </p>
+        </div>
+
+        <!-- Television -->
+        <div class="glass-card p-8 text-center hover-lift gold-border gold-border-hover">
+          <i class="fa-solid fa-tv text-4xl text-[hsl(var(--gold))] mb-6"></i>
+          <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-3">
+            In-Room Television
+          </h3>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Relax with your favorite shows and entertainment in your room.
+          </p>
+        </div>
+
+        <!-- Daily Cleaning -->
+        <div class="glass-card p-8 text-center hover-lift gold-border gold-border-hover">
+          <i class="fa-solid fa-broom text-4xl text-[hsl(var(--gold))] mb-6"></i>
+          <h3 class="font-serif text-xl font-semibold text-[hsl(var(--cream))] mb-3">
+            Daily Housekeeping
+          </h3>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Clean, hygienic rooms maintained daily for your comfort.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Section -->
+
+  <section id="nearby" class="py-20 bg-gradient-to-b from-[#0b2a1e] to-[#061a13]">
+  <div class="container mx-auto px-4">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-12">
+      <h2 class="font-serif text-3xl md:text-4xl font-bold text-[hsl(var(--cream))]">
+        Nearby Places
+      </h2>
+      <p class="mt-3 text-[hsl(var(--cream))] text-opacity-60 max-w-xl mx-auto">
+        Explore famous attractions and essential facilities around our location
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- CARD 1 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Thiruporur Murugan Temple
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            150 m
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Sacred temple dedicated to Lord Murugan
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Nithya Kalyana Perumal Temple
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            7.1 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Historic temple complex
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Wonderla
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            2.5 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            India’s largest amusement park
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Bus Stand
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            1 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Connected to Chennai & nearby cities
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Medical Center
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            450 m
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            healthcare services
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Restaurants
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            290 m
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Local South Indian cuisine
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            ATM & Banks
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            600 m
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Multiple banking facilities
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Mahabalipuram Beach
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            12 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            UNESCO World Heritage site
+          </p>
+        </div>
+      </div>
+
+      
+
+      <!-- CARD 9 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Kovalam Beach
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            10 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Calm beach known for scenic beauty
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 10 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Crocodile Bank
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            5.7 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Reptile conservation and research center
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 11 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            DakshinaChitra
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            12 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            A cultural heritage museum showcasing South Indian culture
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 12 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            ECR Beach
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            4.4 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            A beautiful beach known for its scenic beauty
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 13 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            MGM Dizzee World
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            12 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Family Fun Destination
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 14 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            SIPCOT Siruseri
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            12 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Major IT corridor
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 15 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Mayajaal
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            14 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Multiplex entertainment hub
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 16 -->
+      <div class="glass-card p-6 hover-lift gold-border gold-border-hover min-h-[200px] flex flex-col justify-between">
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-2">
+            Marina MAll
+          </h3>
+          <span class="inline-block text-xs text-[hsl(var(--gold))] border border-[hsl(var(--gold))] rounded-full px-3 py-1 mb-3">
+            12 km
+          </span>
+          <p class="text-sm text-[hsl(var(--cream))] text-opacity-60">
+            Premium shopping and entertainment hub
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+
+
+  <!-- Contact Section -->
+<section id="contact" class="py-24 gradient-forest relative overflow-hidden">
+
+  <!-- Decorative Glow -->
+  <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[hsl(var(--gold))] opacity-10 blur-[120px] rounded-full"></div>
+  <div class="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[hsl(var(--forest-light))] opacity-15 blur-[120px] rounded-full"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <span class="section-header">GET IN TOUCH</span>
+      <h2 class="section-title">
+        Contact <span class="text-gradient-gold">Us</span>
+      </h2>
+      <p class="text-[hsl(var(--cream))] text-opacity-60 max-w-2xl mx-auto">
+        Have questions or ready to book? We're here to help make your stay perfect.
+      </p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <!-- Contact Form -->
+      <div class="glass-card p-10 gold-border shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
+        <h3 class="font-serif text-2xl font-bold text-[hsl(var(--cream))] mb-8">
+          Send us a Message
+        </h3>
+
+        <form id="contactForm" class="space-y-5">
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="text" name="name" placeholder="Your Name" required
+              class="bg-black/40 border border-[hsl(var(--gold))] border-opacity-30 
+              text-[hsl(var(--cream))] px-4 py-3 rounded-xl 
+              focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]
+              focus:shadow-[0_0_25px_rgba(212,175,55,0.25)]
+              transition placeholder:text-white/40">
+            
+            <input type="email" name="email" placeholder="Email" required
+              class="bg-black/40 border border-[hsl(var(--gold))] border-opacity-30 
+              text-[hsl(var(--cream))] px-4 py-3 rounded-xl 
+              focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]
+              focus:shadow-[0_0_25px_rgba(212,175,55,0.25)]
+              transition placeholder:text-white/40">
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="tel" name="phone" placeholder="Phone" required
+              class="bg-black/40 border border-[hsl(var(--gold))] border-opacity-30 
+              text-[hsl(var(--cream))] px-4 py-3 rounded-xl 
+              focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]
+              focus:shadow-[0_0_25px_rgba(212,175,55,0.25)]
+              transition placeholder:text-white/40">
+            
+            <input type="text" name="subject" placeholder="Subject" required
+              class="bg-black/40 border border-[hsl(var(--gold))] border-opacity-30 
+              text-[hsl(var(--cream))] px-4 py-3 rounded-xl 
+              focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]
+              focus:shadow-[0_0_25px_rgba(212,175,55,0.25)]
+              transition placeholder:text-white/40">
+          </div>
+
+          <textarea name="message" rows="4" placeholder="Your message here..." required
+            class="bg-black/40 border border-[hsl(var(--gold))] border-opacity-30 
+            text-[hsl(var(--cream))] px-4 py-3 rounded-xl 
+            focus:outline-none focus:ring-2 focus:ring-[hsl(var(--gold))]
+            focus:shadow-[0_0_25px_rgba(212,175,55,0.25)]
+            transition placeholder:text-white/40"></textarea>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-[#d4af37] to-[#f6e27a]
+            text-[hsl(var(--forest-dark))] py-3 rounded-xl font-bold
+            hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(212,175,55,0.45)]
+            transition-all duration-300">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+      <!-- Info + Map -->
+      <div class="space-y-8">
+
+        <!-- Contact Info -->
+        <div class="grid sm:grid-cols-2 gap-4">
+
+          <div class="glass-card p-5 gold-border gold-border-hover hover-lift">
+            <a href="tel:+919600174666" class="flex items-start gap-4">
+              <div>
+                <i class="fa-solid fa-phone text-[hsl(var(--gold))]"></i>
+              </div>
+              <div>
+                <p class="text-[hsl(var(--cream))] text-opacity-60 text-xs uppercase tracking-wide">Phone</p>
+                <p class="text-[hsl(var(--cream))] font-medium text-sm">+91 9600174666</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="glass-card p-5 gold-border gold-border-hover hover-lift">
+            <a href="mailto:svresidencytpr@gmail.com" class="flex items-start gap-4">
+              <div>
+                <i class="fa-solid fa-envelope text-[hsl(var(--gold))]"></i>
+              </div>
+              <div>
+                <p class="text-[hsl(var(--cream))] text-opacity-60 text-xs uppercase tracking-wide">Email</p>
+                <p class="text-[hsl(var(--cream))] font-medium text-sm">svresidencytpr@gmail.com</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Map -->
+        
+        <div class="relative glass-card rounded-2xl overflow-hidden gold-border h-80 shadow-[0_25px_70px_rgba(0,0,0,0.45)]">
+  
+          <div class="absolute top-4 left-4 bg-black/70 px-4 py-2 rounded-full 
+                      text-xs tracking-widest text-[hsl(var(--gold))] z-10">
+            FIND US HERE
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.8121792980887!2d80.18774397483696!3d12.725672687567586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52510074f5d77f%3A0x52630630bc1767e1!2sS.V%20RESIDENCY!5e0!3m2!1sen!2sin!4v1768309095651!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-[hsl(var(--forest-dark))] border-t border-[hsl(var(--forest-light))] border-opacity-30 pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="lg:col-span-2">
+          <div class="mb-4">
+            <span class="font-serif text-3xl font-bold text-gradient-gold">S V RESIDENCY</span>
+            <p class="text-[hsl(var(--gold))] text-opacity-70 text-sm tracking-widest mt-1">THIRUPORUR</p>
+          </div>
+          <p class="text-[hsl(var(--cream))] text-opacity-60 max-w-md mb-6">
+            Experience the perfect blend of luxury and spirituality at S V Residency. Your peaceful retreat near the sacred Thiruporur Murugan Temple.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-4">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-[hsl(var(--cream))] text-opacity-60 hover:text-[hsl(var(--gold))] transition">Home</a></li>
+            <li><a href="#about" class="text-[hsl(var(--cream))] text-opacity-60 hover:text-[hsl(var(--gold))] transition">About Us</a></li>
+            <li><a href="#rooms" class="text-[hsl(var(--cream))] text-opacity-60 hover:text-[hsl(var(--gold))] transition">Rooms</a></li>
+            <li><a href="#contact" class="text-[hsl(var(--cream))] text-opacity-60 hover:text-[hsl(var(--gold))] transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-serif text-lg font-semibold text-[hsl(var(--cream))] mb-4">Contact Info</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-map-marker-alt text-[hsl(var(--gold))] mt-0.5"></i>
+              <span class="text-[hsl(var(--cream))] text-opacity-60 text-sm">Near Murugan Temple,<br>Thiruporur, Tamil Nadu</span>
+            </li>
+            <li>
+              <a href="tel:+919600174666" class="flex items-center gap-3 text-[hsl(var(--cream))] text-opacity-60 hover:text-[hsl(var(--gold))] transition">
+                <i class="fa-solid fa-phone text-[hsl(var(--gold))]"></i>
+                <span class="text-sm">+91 9600174666</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[hsl(var(--forest-light))] border-opacity-30 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-[hsl(var(--cream))] text-opacity-40 text-sm">© 2025 S V Residency. All rights reserved.</p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919600174666" target="_blank" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          // Close mobile menu if open
+          document.getElementById('mobile-menu').classList.add('hidden');
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.remove('py-5');
+        navbar.classList.add('py-3', 'glass-card');
+      } else {
+        navbar.classList.add('py-5');
+        navbar.classList.remove('py-3', 'glass-card');
+      }
+    });
+
+    // Contact Form - Open WhatsApp
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      let message = `Hello! I have a message for S V Residency.\n\n`;
+      message += `*Name:* ${formData.get('name')}\n`;
+      message += `*Email:* ${formData.get('email')}\n`;
+      message += `*Phone:* ${formData.get('phone')}\n`;
+      message += `*Subject:* ${formData.get('subject')}\n`;
+      message += `*Message:* ${formData.get('message')}`;
+      
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/919600174666?text=${encoded}`, '_blank');
+      alert('Your message will be sent via WhatsApp!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
